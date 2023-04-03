@@ -1,52 +1,33 @@
-### How to use this spring-boot project
+> Hi, First of all thank you for considering me for this role.
+> A short introduction about me,
+> I am Cyrelle, Originally from Philippines, Currently working as an IT consultant.
+> I have been working in Japanese IT Industry for about 5 years.
+> Experince in both front-end and back-end development, mostly on JAVA.
+> I am not new in Spring framework. I have experience Spring framework in one of my client, NTT Data.
 
-- Install packages with `mvn package`
-- Run `mvn spring-boot:run` for starting the application (or use your IDE)
+Below are the list of what I did to the program.
 
-Application (with the embedded H2 database) is ready to be used ! You can access the url below for testing it :
+- EmployeeController.java
+  - added constructor for easy testing
+  - added "final" to the EmployeeService
+  - added javadoc for every method
+  - added response format
+  - deleted System.out.println() functions, reason: better to use logger
+  - fixing bug when updating employee, bug: updating existing record, while adding new record
+  - deleted setEmployeeService() function. reason: unnecessary
+  - added "final" to the EmployeeService
+- EmployeeService.java
+  - Deleted UpdateEmployee method and updated the name saveEmployee method to saveAndUpdateEmployee. reason: doing same thing with saveEmployee method
+- EmployeeServiceImpl.java
+  - Added Constructor
+  - Fixed bug on getEmployee method when fetching non existing employee.
+- Added TestCases on some endpoints
 
-- Swagger UI : http://localhost:8080/swagger-ui.html
-- H2 UI : http://localhost:8080/h2-console
+If I have more time, Below are the list that I wanted to do.
 
-> Don't forget to set the `JDBC URL` value as `jdbc:h2:mem:testdb` for H2 UI.
-
-
-
-### Instructions
-
-- download the zip file of this project
-- create a repository in your own github named 'java-challenge'
-- clone your repository in a folder on your machine
-- extract the zip file in this folder
-- commit and push
-
-- Enhance the code in any ways you can see, you are free! Some possibilities:
-  - Add tests
-  - Change syntax
-  - Protect controller end points
-  - Add caching logic for database calls
-  - Improve doc and comments
-  - Fix any bug you might find
-- Edit readme.md and add any comments. It can be about what you did, what you would have done if you had more time, etc.
-- Send us the link of your repository.
-
-#### Restrictions
-- use java 8
-
-
-#### What we will look for
-- Readability of your code
-- Documentation
-- Comments in your code 
-- Appropriate usage of spring boot
-- Appropriate usage of packages
-- Is the application running as expected
-- No performance issues
-
-#### Your experience in Java
-
-Please let us know more about your Java experience in a few sentences. For example:
-
-- I have 3 years experience in Java and I started to use Spring Boot from last year
-- I'm a beginner and just recently learned Spring Boot
-- I know Spring Boot very well and have been using it for many years
+- Add test cases on all end points. covering OK and BAD results.
+- Add security to the endpoints like JWT.
+- Add security that can consume and produce only JSON
+- Add Logger to start and end of the method. for easy debugging
+- Add constants.java for hardcoded strings
+- Add more information on the api for swagger docs
